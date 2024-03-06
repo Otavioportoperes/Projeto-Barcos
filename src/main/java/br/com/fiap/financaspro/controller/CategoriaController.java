@@ -52,11 +52,31 @@ public class CategoriaController {
         }
 
         // TODO Refatorar com stream
-
+        var categoriaEncontrada = repository 
+        .stream()
+        .filter( c -> c.id().equals(id) )
+        .findFirst();
+       if (categoriaEncontrada.isEmpty()){ 
         return ResponseEntity.notFound().build();
 
     }
+    repository.stream().filter( c -> c.id().equals(id));
 
+    return ResponseEntity.ok(categoriaEncontrada).build();
 
 
 }
+
+@DeleteMapping("{id}")
+public void destroy(){
+    log.info("apagando categoria");
+
+}
+@PutMapping("{id}")
+public ResponseEntity<Categoria> uptade(@PathVariable Long id, @RequestBody Categoria categoria{
+    info
+}
+    
+
+
+
