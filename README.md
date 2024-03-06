@@ -164,3 +164,4 @@ Atualizar os dados da categoria com o `id` informado no path, utilizando os novo
 |404|Não existe categoria com o `id` informado. Consulte lista em /categoria
 ---
 
+
